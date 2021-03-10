@@ -4,7 +4,7 @@
  ?>
 <div class="container">
         <div>
-        <h2>Monitores en inventario  </h2>
+        <h2>Telefonos en inventario  </h2>
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalNuevo">
   Agregar nuevo
 </button>
@@ -25,7 +25,7 @@
               </thead>
             
            <?php 
-           $sql="SELECT * FROM monitor";
+           $sql="SELECT * FROM telefono";
            $result=mysqli_query($conexion,$sql);
            while($ver=mysqli_fetch_row($result)){
            ?>

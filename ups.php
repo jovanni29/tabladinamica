@@ -44,13 +44,13 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Agregar monitor</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Agregar ups</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
       <form action="">
                     <fieldset>
-                        <legend>Datos del monitor</legend>
+                        <legend>Datos del ups</legend>
                         <div class="row">
                         <div class="col">
                             <label for="">Marca</label>
@@ -95,13 +95,13 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Editar monitor</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Editar ups</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
       <form action="">
                     <fieldset>
-                        <legend>Datos del monitor</legend>
+                        <legend>Datos del ups</legend>
                         <div class="row">
                         <div class="col">
                             <label for="">Marca</label>
@@ -134,7 +134,6 @@
     </div>
   </div>
 </div>
-
       <!--TERMINA Modal editar registro -->
     <!--  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -144,7 +143,7 @@
 </html>
 <script type="text/javascript">
     $(document).ready(function(){
-        $('#tabla').load('componentes/tabla_monitor.php');
+        $('#tabla').load('componentes/tabla_ups.php');
     });
     </script>
     <script type="text/javascript">
