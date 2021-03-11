@@ -37,4 +37,22 @@ function actualizaDatos(){
     estado=$('#estadou').val();
 
     cadena= "id="+id+"&marca="+marca+"&modelo="+modelo+"&no_serie="+no_serie+"&estado="+estado;
+
+    $.ajax({
+        type: "POST",
+        url: "php/actualizaDatos.php",
+        data: cadena,
+        success: function (r) {
+            if (r== 1) {
+                alertify.error("ocurrio un error");
+                
+               
+                
+            } else {
+                $('#tabla').load('componentes/tabla_monitor.php');
+                $('#modalEdicion').modal("hide");
+                alertify.success("Actualizado con exito");
+            }
+        }
+    });
 }

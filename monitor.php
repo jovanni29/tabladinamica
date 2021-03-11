@@ -128,7 +128,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary">Actualizar</button>
+        <button type="button" class="btn btn-primary" id="actualizaDatos">Actualizar</button>
       </div>
     </div>
   </div>
@@ -154,6 +154,10 @@
         no_serie=$('#no_serie').val();
         estado=$('#estado').val();
         agregardatos(marca, modelo, no_serie, estado);
+      });
+
+      $('#actualizaDatos').click(function(){
+        actualizaDatos();
       });
     });
     </script>
