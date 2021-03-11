@@ -28,6 +28,7 @@
            $sql="SELECT * FROM monitor";
            $result=mysqli_query($conexion,$sql);
            while($ver=mysqli_fetch_row($result)){
+             $datos=$ver[0]."||".$ver[1]."||".$ver[2]."||".$ver[3]."||".$ver[4];
            ?>
             <tbody>
             <tr>
@@ -36,7 +37,8 @@
             <td><?php echo $ver[2] ?></td>
             <td><?php echo $ver[3] ?></td>
             <td><?php echo $ver[4] ?></td>
-            <td><button type='button' class='btn btn-warning' data-bs-toggle="modal" data-bs-target="#modalEdicion">Editar</button></td>
+            <td><button type='button' class='btn btn-warning' data-bs-toggle="modal" data-bs-target="#modalEdicion"
+             onclick="agregaform('<?php echo $datos ?>')">Editar</button></td>
             <td><button type='button' class='btn btn-danger'>Eliminar</button></td>
             </tr>
             </tbody>
