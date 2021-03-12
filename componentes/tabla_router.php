@@ -4,7 +4,7 @@
  ?>
 <div class="container">
         <div>
-        <h2>Telefonos en inventario  </h2>
+        <h2>Routers en inventario  </h2>
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalNuevo">
   Agregar nuevo
 </button>
@@ -25,7 +25,7 @@
               </thead>
             
            <?php 
-           $sql="SELECT * FROM telefono";
+           $sql="SELECT * FROM router";
            $result=mysqli_query($conexion,$sql);
            while($ver=mysqli_fetch_row($result)){
              $datos=$ver[0]."||".$ver[1]."||".$ver[2]."||".$ver[3]."||".$ver[4];

@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <!--  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
     <script src="librerias/jquery-3.2.1.min.js"></script> 
-    <script src="js/funciones.js"></script>
+    <script src="js/ups.js"></script>
    <!-- <script src="librerias/bootstrap/js/bootstrap.js"></script> -->
     <script src="librerias/alertifyjs/alertify.js"></script> 
     <title>Inventario</title>
@@ -44,13 +44,12 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Agregar ups</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Agregar monitor</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-      <form action="">
-                    <fieldset>
-                        <legend>Datos del ups</legend>
+      
+                   
                         <div class="row">
                         <div class="col">
                             <label for="">Marca</label>
@@ -72,9 +71,7 @@
                             <input class="form-control" type="text" id="estado" minlength="1" required >
                         </div>
                     </div>
-                   
-                    </fieldset>
-                    </form>
+                                  
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
@@ -104,23 +101,24 @@
                         <legend>Datos del ups</legend>
                         <div class="row">
                         <div class="col">
+                          <input type="text" hidden="" id="idmonitor" >
                             <label for="">Marca</label>
-                            <input class="form-control" type="text">
+                            <input class="form-control" type="text" id="marcau">
                         </div>
                         <div class="col">
                             <label for="">Modelo</label>
-                            <input class="form-control" type="text">
+                            <input class="form-control" type="text" id="modelou">
                         </div>
                     </div>
                     <div class="row">
                         
                         <div class="col">
                             <label for="">Numero de serie</label>
-                            <input class="form-control" type="text">
+                            <input class="form-control" type="text" id="no_serieu">
                         </div>
                         <div class="col">
                             <label for="">Estado</label>
-                            <input class="form-control" type="text">
+                            <input class="form-control" type="text" id="estadou">
                         </div>
                     </div>
                    
@@ -129,11 +127,12 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-        <button type="button" class="btn btn-primary">Actualizar</button>
+        <button type="button" class="btn btn-primary" id="actualizaDatos">Actualizar</button>
       </div>
     </div>
   </div>
 </div>
+
       <!--TERMINA Modal editar registro -->
     <!--  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -154,6 +153,10 @@
         no_serie=$('#no_serie').val();
         estado=$('#estado').val();
         agregardatos(marca, modelo, no_serie, estado);
+      });
+
+      $('#actualizaDatos').click(function(){
+        actualizaDatos();
       });
     });
     </script>

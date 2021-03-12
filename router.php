@@ -44,7 +44,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Agregar monitor</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Agregar router</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -92,13 +92,13 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Editar monitor</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Editar router</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
       <form action="">
                     <fieldset>
-                        <legend>Datos del monitor</legend>
+                        <legend>Datos del router</legend>
                         <div class="row">
                         <div class="col">
                           <input type="text" hidden="" id="idmonitor" >
@@ -142,7 +142,7 @@
 </html>
 <script type="text/javascript">
     $(document).ready(function(){
-        $('#tabla').load('componentes/tabla_monitor.php');
+        $('#tabla').load('componentes/tabla_router.php');
     });
     </script>
     <script type="text/javascript">

@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <!--  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
     <script src="librerias/jquery-3.2.1.min.js"></script> 
-    <script src="js/funciones.js"></script>
+    <script src="js/impresora.js"></script>
    <!-- <script src="librerias/bootstrap/js/bootstrap.js"></script> -->
     <script src="librerias/alertifyjs/alertify.js"></script> 
     <title>Inventario</title>
@@ -44,7 +44,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Agregar monitor</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Agregar impresora</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -92,13 +92,13 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Editar monitor</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Editar impresora</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
       <form action="">
                     <fieldset>
-                        <legend>Datos del monitor</legend>
+                        <legend>Datos de la impresorar</legend>
                         <div class="row">
                         <div class="col">
                           <input type="text" hidden="" id="idmonitor" >
@@ -142,7 +142,7 @@
 </html>
 <script type="text/javascript">
     $(document).ready(function(){
-        $('#tabla').load('componentes/tabla_monitor.php');
+        $('#tabla').load('componentes/tabla_impresora.php');
     });
     </script>
     <script type="text/javascript">
