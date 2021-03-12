@@ -56,3 +56,29 @@ function actualizaDatos(){
         }
     });
 }
+
+function preguntarSiNo(id){
+ alertify.confirm('Eliminar datos', '¿Esta seguro de eliminar este registro?',
+ function(){eliminarDatos(id)}
+ ,function(){alertify.error('Se cancelo')});
+}
+
+function eliminarDatos(id){
+    cadena= "id="+ id;
+    $.ajax({
+        type: 'POST',
+        url: "php/eliminarDatos.php",
+        data: cadena,
+        success:function(r){
+            if (r== 1) {
+                alertify.error("ocurrio un error");
+                
+            } else {
+                $('#tabla').load('componentes/tabla_monitor.php');
+               
+                alertify.success("Eliminado con exito");
+            }
+        }
+
+    })
+}

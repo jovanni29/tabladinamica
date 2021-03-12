@@ -39,7 +39,7 @@
             <td><?php echo $ver[4] ?></td>
             <td><button type='button' class='btn btn-warning' data-bs-toggle="modal" data-bs-target="#modalEdicion"
              onclick="agregaform('<?php echo $datos ?>')">Editar</button></td>
-            <td><button type='button' class='btn btn-danger'>Eliminar</button></td>
+            <td><button type='button' class='btn btn-danger' onclick="preguntarSiNo('<?php echo $ver[0]?>')">Eliminar</button></td>
             </tr>
             </tbody>
             <?php 
