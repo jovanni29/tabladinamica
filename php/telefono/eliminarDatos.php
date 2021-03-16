@@ -3,6 +3,6 @@ require_once "../conexion.php";
 $conexion=conexion();
 $id=$_POST['id'];
 
-$sql="DELETE from router where id='$id'";
+$sql="DELETE from telefono where id='$id'";
 echo $result=mysqli_query($conexion, $sql);
 ?>

@@ -67,8 +67,12 @@
                             <input class="form-control" type="text" id="no_serie" required>
                         </div>
                         <div class="col">
-                            <label for="">Estado</label>
-                            <input class="form-control" type="text" id="estado" minlength="1" required >
+                        <label for="">Estado</label>
+                            <select class="form-select" name="" id="estado">
+                            <option value="funciona">funciona</option>
+                            <option value="no funciona">no funciona</option>
+                            <option value="dañado">dañado</option>
+                            </select>
                         </div>
                     </div>
                                   
@@ -117,8 +121,12 @@
                             <input class="form-control" type="text" id="no_serieu">
                         </div>
                         <div class="col">
-                            <label for="">Estado</label>
-                            <input class="form-control" type="text" id="estadou">
+                        <label for="">Estado</label>
+                            <select class="form-select" name="" id="estadou">
+                            <option value="funciona">funciona</option>
+                            <option value="no funciona">no funciona</option>
+                            <option value="dañado">dañado</option>
+                            </select>
                         </div>
                     </div>
                    

@@ -4,16 +4,15 @@ function agregardatos(marca, modelo, no_serie, estado) {
 
     $.ajax({
         type: "POST",
-        url: "php/impresora/agregarDatos.php",
+        url: "php/telefono/agregarDatos.php",
         data: cadena,
         success: function (r) {
             if (r== 1) {
                 alertify.error("ocurrio un error");
                 
             } else {
-                $('#tabla').load('componentes/tabla_impresora.php');
+                $('#tabla').load('componentes/tabla_telefono.php');
                 $('#modalNuevo').modal("hide");
-                
                 alertify.success("Agregado con exito");
             }
         }
@@ -41,7 +40,7 @@ function actualizaDatos(){
 
     $.ajax({
         type: "POST",
-        url: "php/impresora/actualizaDatos.php",
+        url: "php/telefono/actualizaDatos.php",
         data: cadena,
         success: function (r) {
             if (r== 1) {
@@ -50,7 +49,7 @@ function actualizaDatos(){
                
                 
             } else {
-                $('#tabla').load('componentes/tabla_impresora.php');
+                $('#tabla').load('componentes/tabla_telefono.php');
                 $('#modalEdicion').modal("hide");
                 alertify.success("Actualizado con exito");
             }
@@ -68,14 +67,14 @@ function eliminarDatos(id){
     cadena= "id="+ id;
     $.ajax({
         type: 'POST',
-        url: "php/impresora/eliminarDatos.php",
+        url: "php/telefono/eliminarDatos.php",
         data: cadena,
         success:function(r){
             if (r== 1) {
                 alertify.error("ocurrio un error");
                 
             } else {
-                $('#tabla').load('componentes/tabla_impresora.php');
+                $('#tabla').load('componentes/tabla_telefono.php');
                
                 alertify.success("Eliminado con exito");
             }

@@ -6,7 +6,7 @@ $b=$_POST['modelo'];
 $c=$_POST['no_serie'];
 $d=$_POST['estado'];
 
-$sql= "INSERT INTO router (marca,modelo,numero_serie,estado) values ('$a','$b','$c','$d')";
+$sql= "INSERT INTO telefono (marca,modelo,numero_serie,estado) values ('$a','$b','$c','$d')";
 echo $result=mysqli_query($conexion,$sql);
 
 ?>
