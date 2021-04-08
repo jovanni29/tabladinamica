@@ -75,6 +75,7 @@
                             </select>
                         </div>
                     </div>
+                    <hr>
                                   
       </div>
       <div class="modal-footer">
@@ -129,6 +130,7 @@
                             </select>
                         </div>
                     </div>
+                   
                    
                     </fieldset>
                 </form>
