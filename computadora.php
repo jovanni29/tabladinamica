@@ -108,9 +108,28 @@
                     </fieldset>
                     <hr>    
                     <fieldset>
-                    <legend>Datos del sistema operativo</legend>
+                    <legend>Datos del sistema operativo windows</legend>
                     <div class="row">
                     <div class="col">
+                    <label for="">Nombre</label>
+                    <input class="form-control" type="text">
+                    </div>
+                    <div class="col">
+                    <label for="">Arquitectura</label>
+                    <select class="form-select" name="" id="">
+                    <option value="32-bit">32-bit</option>
+                    <option value="64-bit">64-bit</option>
+                    </select>
+                    </div>
+                    </div>
+                    <div class="row">
+                    <div class="col">
+                    <label for="">Version</label>
+                    <select class="form-select" name="" id="">
+                    <option value="7">7</option>
+                    <option value="10">10</option>
+                    </select>
+
                     </div>
                     </div>
                     </fieldset>
