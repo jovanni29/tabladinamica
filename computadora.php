@@ -57,21 +57,21 @@
                         <div class="row">
                             <div class="col">
                                 <label for="">Nombre del dispositivo</label>
-                                <input class="form-control" type="text" id="nombre" required>
+                                <input class="form-control" type="text" id="nombre_gab" required>
                             </div>
                             <div class="col">
                                 <label for="">Marca</label>
-                                <input class="form-control" type="text" id="marca" required>
+                                <input class="form-control" type="text" id="marca_gab" required>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
                                 <label for="">Modelo</label>
-                                <input class="form-control" type="text" id="modelo">
+                                <input class="form-control" type="text" id="modelo_gab">
                             </div>
                             <div class="col">
                                 <label for="">Tipo</label>
-                                <select class="form-select" name="" id="tipo">
+                                <select class="form-select" name="" id="tipo_gab">
                                     <option value="tower">tower</option>
                                     <option value="all in one">all in one</option>
                                     <option value="mini tower">mini tower</option>
@@ -84,11 +84,11 @@
 
                             <div class="col">
                                 <label for="">Numero de serie</label>
-                                <input class="form-control" type="text" id="no_serie" required>
+                                <input class="form-control" type="text" id="noserie_gab" required>
                             </div>
                             <div class="col">
                                 <label for="">Estado</label>
-                                <select class="form-select" name="" id="estado">
+                                <select class="form-select" name="" id="estado_gab">
                                     <option value="bodega">bodega</option>
                                     <option value="buenas condiciones">buenas condiciones</option>
                                     <option value="dañado">dañado</option>
@@ -102,7 +102,7 @@
                         <div class="row">
                             <div class="col">
                                 <label for="">Comentarios</label>
-                                <textarea class="form-control" name="" id="comentario" cols="30" rows="5"></textarea>
+                                <textarea class="form-control" name="" id="comentario_gab" cols="30" rows="5"></textarea>
                             </div>
                         </div>
                     </fieldset>
@@ -110,13 +110,10 @@
                     <fieldset>
                         <legend>Datos del sistema operativo windows</legend>
                         <div class="row">
-                            <div class="col">
-                                <label for="">Nombre</label>
-                                <input class="form-control" type="text">
-                            </div>
+                            
                             <div class="col">
                                 <label for="">Arquitectura</label>
-                                <select class="form-select" name="" id="">
+                                <select class="form-select" name="" id="arquitectura_so">
                                     <option value="32-bit">32-bit</option>
                                     <option value="64-bit">64-bit</option>
                                 </select>
@@ -125,7 +122,7 @@
                         <div class="row">
                             <div class="col">
                                 <label for="">Version</label>
-                                <select class="form-select" name="" id="">
+                                <select class="form-select" name="" id="version_so">
                                     <option value="7">7</option>
                                     <option value="10">10</option>
                                 </select>
@@ -133,7 +130,7 @@
                             </div>
                             <div class="col">
                                 <label for="">Product ID</label>
-                                <input class="form-control" type="text">
+                                <input class="form-control" type="text" id="id_so">
                             </div>
                         </div>
                     </fieldset>
@@ -143,32 +140,32 @@
                         <div class="row">
                             <div class="col">
                                 <label for="">Marca</label>
-                                <select class="form-select" name="" id="">
+                                <select class="form-select" name="" id="marca_pro">
                                     <option value="Intel">Intel</option>t
                                     <option value="AMD">AMD</option>
                                 </select>
                             </div>
                             <div class="col">
                                 <label for="">Modelo</label>
-                                <input class="form-control" type="text">
+                                <input class="form-control" type="text" id="modelo_pro">
                             </div>
 
                         </div>
                         <div class="row">
                             <div class="col">
                                 <label for="">Frecuencia (MHz)</label>
-                                <input class="form-control" type="number" name="" id="">
+                                <input class="form-control" type="number" name="" id="frecuencia_pro">
                             </div>
                             <div class="col">
                                 <label for="">Numero de nucleos</label>
-                                <input class="form-control" type="number" name="" id="">
+                                <input class="form-control" type="number" name="" id="nucleos_pro">
                             </div>
 
                         </div>
                         <div class="row">
                             <div class="col">
                                 <label for="">Numero de hilos</label>
-                                <input class="form-control" type="number" name="" id="">
+                                <input class="form-control" type="number" name="" id="hilos_pro">
                             </div>
                             <div class="col">
                             </div>
@@ -180,25 +177,25 @@
                         <div class="row">
                             <div class="col">
                                 <label for="">Marca</label>
-                                <input class="form-control" type="text">
+                                <input class="form-control" type="text" id="marca_ram">
                             </div>
                             <div class="col">
-                            <label for="">Tipo</label>
-                            <select class="form-select" name="" id="">
-                            <option value="DDR3">DDR3</option>
-                            <option value="DDR4">DDR4</option>
-                            </select>
+                                <label for="">Tipo</label>
+                                <select class="form-select" name="" id="tipo_ram">
+                                    <option value="DDR3">DDR3</option>
+                                    <option value="DDR4">DDR4</option>
+                                </select>
                             </div>
                         </div>
                         <div class="row">
-                        <div class="col">
-                        <label for="">Tamaño(GB)</label>
-                        <input class="form-control" type="number" name="" id="">
-                        </div>
-                        <div class="col">
-                        <label for="">Frecuencua (MHz)</label>
-                        <input class="form-control" type="number" name="" id="">
-                        </div>
+                            <div class="col">
+                                <label for="">Tamaño(GB)</label>
+                                <input class="form-control" type="number" name="" id="tamano_ram">
+                            </div>
+                            <div class="col">
+                                <label for="">Frecuencia (MHz)</label>
+                                <input class="form-control" type="number" name="" id="frecuencia_ram">
+                            </div>
                         </div>
                     </fieldset>
 
@@ -228,38 +225,157 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="">
-                        <fieldset>
-                            <legend>Datos del CPU</legend>
-                            <div class="row">
-                                <div class="col">
-                                    <input type="text" hidden="" id="idmonitor">
-                                    <label for="">Marca</label>
-                                    <input class="form-control" type="text" id="marcau">
-                                </div>
-                                <div class="col">
-                                    <label for="">Modelo</label>
-                                    <input class="form-control" type="text" id="modelou">
-                                </div>
-                            </div>
-                            <div class="row">
 
-                                <div class="col">
-                                    <label for="">Numero de serie</label>
-                                    <input class="form-control" type="text" id="no_serieu">
-                                </div>
-                                <div class="col">
-                                    <label for="">Estado</label>
-                                    <select class="form-select" name="" id="estadou">
-                                        <option value="funciona">funciona</option>
-                                        <option value="no funciona">no funciona</option>
-                                        <option value="dañado">dañado</option>
-                                    </select>
-                                </div>
+                    <fieldset>
+                        <legend>Datos del gabinete</legend>
+
+                        <div class="row">
+                            <div class="col">
+                                <label for="">Nombre del dispositivo</label>
+                                <input class="form-control" type="text" id="nombre_gabu" required>
+                            </div>
+                            <div class="col">
+                                <label for="">Marca</label>
+                                <input class="form-control" type="text" id="marca_gabu" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="">Modelo</label>
+                                <input class="form-control" type="text" id="modelo_gabu">
+                            </div>
+                            <div class="col">
+                                <label for="">Tipo</label>
+                                <select class="form-select" name="" id="tipo_gabu">
+                                    <option value="tower">tower</option>
+                                    <option value="all in one">all in one</option>
+                                    <option value="mini tower">mini tower</option>
+                                    <option value="desktop">desktop</option>
+                                    <option value="laptop">laptop</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <div class="col">
+                                <label for="">Numero de serie</label>
+                                <input class="form-control" type="text" id="noserie_gabu" required>
+                            </div>
+                            <div class="col">
+                                <label for="">Estado</label>
+                                <select class="form-select" name="" id="estado_gabu">
+                                    <option value="bodega">bodega</option>
+                                    <option value="buenas condiciones">buenas condiciones</option>
+                                    <option value="dañado">dañado</option>
+                                    <option value="falta de refacciones">falta de refacciones </option>
+                                    <option value="malas condiciones">malas condiciones</option>
+                                    <option value="nuevo">nuevo</option>
+                                    <option value="regular">regular</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="">Comentarios</label>
+                                <textarea class="form-control" name="" id="comentario_gabu" cols="30" rows="5"></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <hr>
+                    <fieldset>
+                        <legend>Datos del sistema operativo windows</legend>
+                        <div class="row">
+                           
+                            <div class="col">
+                                <label for="">Arquitectura</label>
+                                <select class="form-select" name="" id="arquitectura_sou">
+                                    <option value="32-bit">32-bit</option>
+                                    <option value="64-bit">64-bit</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="">Version</label>
+                                <select class="form-select" name="" id="version_sou">
+                                    <option value="7">7</option>
+                                    <option value="10">10</option>
+                                </select>
+
+                            </div>
+                            <div class="col">
+                                <label for="">Product ID</label>
+                                <input class="form-control" type="text" id="id_sou">
+                            </div>
+                        </div>
+                    </fieldset>
+                    <hr>
+                    <fieldset>
+                        <legend>Datos del procesador</legend>
+                        <div class="row">
+                            <div class="col">
+                                <label for="">Marca</label>
+                                <select class="form-select" name="" id="marca_prou">
+                                    <option value="Intel">Intel</option>t
+                                    <option value="AMD">AMD</option>
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label for="">Modelo</label>
+                                <input class="form-control" type="text" id="modelo_prou">
                             </div>
 
-                        </fieldset>
-                    </form>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="">Frecuencia (MHz)</label>
+                                <input class="form-control" type="number" name="" id="frecuencia_prou">
+                            </div>
+                            <div class="col">
+                                <label for="">Numero de nucleos</label>
+                                <input class="form-control" type="number" name="" id="nucleos_prou">
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="">Numero de hilos</label>
+                                <input class="form-control" type="number" name="" id="hilos_prou">
+                            </div>
+                            <div class="col">
+                            </div>
+                        </div>
+
+                    </fieldset>
+                    <fieldset>
+                        <legend>Memoria RAM</legend>
+                        <div class="row">
+                            <div class="col">
+                                <label for="">Marca</label>
+                                <input class="form-control" type="text" id="marca_ramu">
+                            </div>
+                            <div class="col">
+                                <label for="">Tipo</label>
+                                <select class="form-select" name="" id="tipo_ramu">
+                                    <option value="DDR3">DDR3</option>
+                                    <option value="DDR4">DDR4</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="">Tamaño(GB)</label>
+                                <input class="form-control" type="number" name="" id="tamano_ramu">
+                            </div>
+                            <div class="col">
+                                <label for="">Frecuencia (MHz)</label>
+                                <input class="form-control" type="number" name="" id="frecuencia_ramu">
+                            </div>
+                        </div>
+                    </fieldset>
+
+
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
