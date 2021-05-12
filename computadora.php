@@ -11,7 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <!--  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
     <script src="librerias/jquery-3.2.1.min.js"></script>
-    <script src="js/funciones.js"></script>
+    <script src="js/computadora.js"></script>
     <!-- <script src="librerias/bootstrap/js/bootstrap.js"></script> -->
     <script src="librerias/alertifyjs/alertify.js"></script>
     <title>Inventario</title>
@@ -47,7 +47,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Agregar CPU</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close" data-bsrc-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
 
@@ -231,6 +231,7 @@
 
                         <div class="row">
                             <div class="col">
+                            <input type="text" hidden="" id="idcomputadora" >
                                 <label for="">Nombre del dispositivo</label>
                                 <input class="form-control" type="text" id="nombre_gabu" required>
                             </div>
@@ -401,11 +402,28 @@
 <script type="text/javascript">
     $(document).ready(function() {
         $('#guardarnuevo').click(function() {
-            marca = $('#marca').val();
-            modelo = $('#modelo').val();
-            no_serie = $('#no_serie').val();
-            estado = $('#estado').val();
-            agregardatos(marca, modelo, no_serie, estado);
+            nombre_gab= $('#nombre_gab').val();
+            marca_gab=$('#marca_gab').val();
+            modelo_gab=$('#modelo_gab').val();
+            tipo_gab=$('#tipo_gab').val();
+            noserie_gab=$('#noserie_gab').val();
+            estado_gab=$('#estado_gab').val();
+            comentario_gab=$('#comentario_gab').val();
+            ariquetectura_so=$('#arquitectura_so').val();
+            version_so=$('#version_so').val();
+            id_so=$('#id_so').val();
+            marca_pro=$('#marca_pro').val();
+            modelo_pro=$('#modelo_pro').val();
+            frecuencia_pro=$('#frecuencia_pro').val();
+            nucleos_pro=$('#nucleos_pro').val();
+            hilos_pro=$('#nucleos_pro').val();
+            marca_ram=$('#marca_ram').val();
+            tipo_ram=$('#tipo_ram').val();
+            tamano_ram=$('#tamano_ram').val();
+            frecuencia_ram=$('#frecuencia_ram').val();
+
+            agregardatos(nombre_gab, marca_gab, modelo_gab, tipo_gab, noserie_gab, estado_gab, comentario_gab, ariquetectura_so,
+            version_so, id_so, marca_pro, modelo_pro, frecuencia_pro, nucleos_pro, hilos_pro, marca_ram, tipo_ram, tamano_ram, frecuencia_ram);
         });
 
         $('#actualizaDatos').click(function() {

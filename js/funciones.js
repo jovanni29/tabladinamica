@@ -57,6 +57,7 @@ function actualizaDatos(){
     });
 }
 
+
 function preguntarSiNo(id){
  alertify.confirm('Eliminar datos', '¿Esta seguro de eliminar este registro?',
  function(){eliminarDatos(id)}

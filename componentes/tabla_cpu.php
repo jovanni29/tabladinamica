@@ -15,10 +15,10 @@
             <thead class="table-dark">
               <tr>
                 <th scope="col">#</th>
+                <th scope="col">Nombre de equipo</th>
                 <th scope="col">Marca</th>
                 <th scope="col">Modelo</th>
-                <th scope="col">No. Serie</th>
-                <th scope="col">Estado</th>
+                <th scope="col">Tipo</th>
                 <th scope="col">Editar</th>
                 <th scope="col">Eliminar</th>
               </tr>
@@ -28,7 +28,9 @@
            $sql="SELECT * FROM computadora";
            $result=mysqli_query($conexion,$sql);
            while($ver=mysqli_fetch_row($result)){
-             $datos=$ver[0]."||".$ver[1]."||".$ver[2]."||".$ver[3]."||".$ver[4];
+             $datos=$ver[0]."||".$ver[1]."||".$ver[2]."||".$ver[3]."||".$ver[4]."||".$ver[5]."||".$ver[6]."||".$ver[7].
+             "||".$ver[8]."||".$ver[9]."||".$ver[10]."||".$ver[11]."||".$ver[12]."||".$ver[13]."||".$ver[14]."||".$ver[15].
+             "||".$ver[16]."||".$ver[17]."||".$ver[18]."||".$ver[19];
            ?>
             <tbody>
             <tr>

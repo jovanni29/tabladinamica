@@ -36,32 +36,38 @@
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
-  < div class="carousel-inner">
+  <div class="carousel-inner">
     <div class="carousel-item active" data-bs-interval="10000">
       <img src="ups.jpg" class="d-block w-100" alt="..."  height="800">
       <div class="carousel-caption d-none d-md-block">
-        <h5>First slide label</h5>
-        <p>Some representative placeholder content for the first slide.</p>
+        <h5>UPS</h5>
+        <p>es un sistema que se coloca entre el suministro de energía principal y
+         equipos eléctricos/electrónicos con el propósito de abastecer de energía (corriente alterna) y permitir la correcta operación por 
+        un cierto tiempo de respaldo a los equipos conectados en caso de un corte total de energía en el suministro principal</p>
       </div>
     </div>
     <div class="carousel-item" data-bs-interval="2000">
       <img src="monitor.jpg" class="d-block w-100" alt="..." height="900">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
+        <h5>Monitor</h5>
+        <p>Periférico para visualizar los datos que muestra un ordenador,
+         o como dice su definición técnica, «un dispositivo de salida de datos».</p>
       </div>
     </div>
     <div class="carousel-item" data-bs-interval="2000">
       <img src="cpu.jpg" class="d-block w-100" alt="..." height="900">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
-        <p>Some representative placeholder content for the second slide.</p>
+        <h5>Computadora</h5>
+        <p>Se denomina como computadora de escritorio, computador de escritorio, ordenador
+         de sobremesa u ordenador fijo a un tipo de ordenador personal, diseñado y fabricado
+          para ser instalado en una ubicación estática, como un escritorio o mesa, a diferencia
+           de otras computadoras similares, como la computadora portátil, cuya ubicación es dinámica.</p>
       </div>
     </div>
     <div class="carousel-item">
       <img src="monitor2.png" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
+        <h5></h5>
         <p>Some representative placeholder content for the third slide.</p>
       </div>
     </div>
