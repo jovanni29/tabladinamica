@@ -46,7 +46,82 @@ function agregardatos(nombregab, marcagab, modelogab, tipogab, noseriegab, estad
         $('#tipo_ramu').val(d[17]);
         $('#tamano_ramu').val(d[18]);
         $('#frecuencia_ramu').val(d[19]);
-  
-        
 
     }
+
+    function actualizaDatos(){
+        id=$('#idcomputadora').val();
+        nombre_gabu=$('#nombre_gabu').val();
+        marca_gabu=$('#marca_gabu').val();
+        modelo_gabu=$('#modelo_gabu').val();
+        tipo_gabu=$('#tipo_gabu').val();
+        noserie_gabu=$('#noserie_gabu').val();
+        estado_gabu=$('#estado_gabu').val();
+        comentario_gabu=$('#comentario_gabu').val();
+        arquitectura_sou=$('#arquitectura_sou').val();
+        version_sou=$('#version_sou').val();
+        id_sou=$('#id_sou').val();
+        marca_prou=$('#marca_prou').val();
+        modelo_prou=$('#modelo_prou').val();
+        frecuencia_prou=$('#frecuencia_prou').val();
+        nucleos_prou=$('#nucleos_prou').val();
+        hilos_prou=$('#hilos_prou').val();
+        marca_ramu=$('#marca_ramu').val();
+        tipo_ramu=$('#tipo_ramu').val();
+        tamano_ramu=$('#tamano_ramu').val();
+        frecuencia_ramu=$('#frecuencia_ramu').val();
+
+        cadena= "id_computadora="+id+"&nombre_gab="+nombre_gabu+"&marca_gab="+marca_gabu+"&modelo_gab="+modelo_gabu+"&tipo_gab="
+        +tipo_gabu+"&noserie_gab="+noserie_gabu+"&estado_gab="+estado_gabu+"&comentario_gab="
+        +comentario_gabu+"&arquitectura_so="+arquitectura_sou+"&version_so="+version_sou+
+        "&id_so="+id_sou+"&marca_pro="+marca_prou+"&modelo_pro="+modelo_prou+"&frecuencia_pro="
+        +frecuencia_prou+"&nucleos_pro="+nucleos_prou+"&hilos_pro="+hilos_prou+"&marca_ram="+marca_ramu+"&tipo_ram="+
+        tipo_ramu+"&tamano_ram="+tamano_ramu+"&frecuencia_ram="+frecuencia_ramu;
+
+        $.ajax({
+            type: "POST",
+            url: "php/computadora/actualizaDatos.php",
+            data: cadena,
+            success: function (r) {
+                if (r== 1) {
+                    alertify.error("ocurrio un error");
+                    
+                   
+                    
+                } else {
+                    $('#tabla').load('componentes/tabla_cpu.php');
+                    $('#modalEdicion').modal("hide");
+                    alertify.success("Actualizado con exito");
+                }
+            }
+        });
+
+
+    }
+
+    function preguntarSiNo(id){
+        alertify.confirm('Eliminar datos', '¿Esta seguro de eliminar este registro?',
+        function(){eliminarDatos(id)}
+        ,function(){alertify.error('Se cancelo')});
+       }
+
+       function eliminarDatos(id){
+        cadena= "id="+ id;
+        $.ajax({
+            type: 'POST',
+            url: "php/computadora/eliminarDatos.php",
+            data: cadena,
+            success:function(r){
+                if (r== 1) {
+                    alertify.error("ocurrio un error");
+                    
+                } else {
+                    $('#tabla').load('componentes/tabla_cpu.php');
+                   
+                    alertify.success("Eliminado con exito");
+                }
+            }
+    
+        });
+    }
+       

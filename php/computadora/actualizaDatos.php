@@ -1,7 +1,7 @@
 <?php 
 require_once "../conexion.php";
 $conexion=conexion();
-$id=$_POST['id'];
+$id=$_POST['id_computadora'];
 $a=$_POST['nombre_gab'];
 $b=$_POST['marca_gab'];
 $c=$_POST['modelo_gab'];
@@ -41,7 +41,7 @@ $sql= "UPDATE computadora set nombre_gab='$a',
                              tipo_ram='$q',
                              tamano_ram='$r',
                              frecuencia_ram='$s'
-                             where  id='$id'";
+                             where  id_computadora='$id'";
                              
 echo $result=mysqli_query($conexion,$sql);
 ?>
