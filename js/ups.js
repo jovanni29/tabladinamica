@@ -11,8 +11,11 @@ function agregardatos(marca, modelo, no_serie, estado) {
                 alertify.error("ocurrio un error");
                 
             } else {
+                
                 $('#tabla').load('componentes/tabla_ups.php');
                 $('#modalNuevo').modal("hide");
+                
+               
                 alertify.success("Agregado con exito");
             }
         }

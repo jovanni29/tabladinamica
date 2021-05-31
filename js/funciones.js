@@ -13,6 +13,7 @@ function agregardatos(marca, modelo, no_serie, estado) {
             } else {
                 $('#tabla').load('componentes/tabla_monitor.php');
                 $('#modalNuevo').modal("hide");
+               // $('#modalNuevo')[0].reset();
                 alertify.success("Agregado con exito");
             }
         }

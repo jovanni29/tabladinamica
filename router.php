@@ -40,6 +40,7 @@
    
 
   <!-- Modal -->
+  
 <div class="modal fade" id="modalNuevo" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
@@ -85,6 +86,7 @@
     </div>
   </div>
 </div>
+
  <!--TERMINA Modal agregar nuevo registro -->
 
       

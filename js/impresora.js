@@ -12,7 +12,9 @@ function agregardatos(marca, modelo, no_serie, estado) {
                 
             } else {
                 $('#tabla').load('componentes/tabla_impresora.php');
+                
                 $('#modalNuevo').modal("hide");
+                
                 
                 alertify.success("Agregado con exito");
             }
