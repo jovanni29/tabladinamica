@@ -158,11 +158,23 @@
     <script type="text/javascript">
     $(document).ready(function(){
       $('#guardarnuevo').click(function(){
-        marca=$('#marca').val();
-        modelo=$('#modelo').val();
-        no_serie=$('#no_serie').val();
-        estado=$('#estado').val();
-        agregardatos(marca, modelo, no_serie, estado);
+        // if($('#marca').val()==""){
+        //   alertify.alert("debes agregar la marca");
+        //   return false;
+        // } else if($('#modelo').val()==""){
+        //   alertify.alert("debes agregar el modelo");
+        //   return false;
+        // } else if($('#no_serie').val()==""){
+        //   alertify.alert("debes agregar el numero de serie");
+        //   return false;
+        // } else if(){
+          
+        // }
+         marca=$('#marca').val();
+         modelo=$('#modelo').val();
+         no_serie=$('#no_serie').val();
+         estado=$('#estado').val();
+         agregardatos(marca, modelo, no_serie, estado);
       });
 
       $('#actualizaDatos').click(function(){
