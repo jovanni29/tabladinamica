@@ -8,12 +8,13 @@ function agregardatos(marca, modelo, no_serie, estado) {
         data: cadena,
         success: function (r) {
             if (r== 1) {
-                alertify.error("ocurrio un error");
-                
-            } else {
                 $('#tabla').load('componentes/tabla_router.php');
                 $('#modalNuevo').modal("hide");
                 alertify.success("Agregado con exito");
+                
+                
+            } else {
+                alertify.error("ocurrio un error");
             }
         }
     });
@@ -44,14 +45,15 @@ function actualizaDatos(){
         data: cadena,
         success: function (r) {
             if (r== 1) {
-                alertify.error("ocurrio un error");
+                $('#tabla').load('componentes/tabla_router.php');
+                $('#modalEdicion').modal("hide");
+                alertify.success("Actualizado con exito");
+                
                 
                
                 
             } else {
-                $('#tabla').load('componentes/tabla_router.php');
-                $('#modalEdicion').modal("hide");
-                alertify.success("Actualizado con exito");
+                alertify.error("ocurrio un error");
             }
         }
     });
@@ -71,12 +73,13 @@ function eliminarDatos(id){
         data: cadena,
         success:function(r){
             if (r== 1) {
-                alertify.error("ocurrio un error");
-                
-            } else {
                 $('#tabla').load('componentes/tabla_router.php');
                
                 alertify.success("Eliminado con exito");
+                
+                
+            } else {
+                alertify.error("ocurrio un error");
             }
         }
 

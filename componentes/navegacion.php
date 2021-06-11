@@ -1,7 +1,7 @@
 <nav class="navbar navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.php">
-        <img src="radar.png" alt="" width="50" height="35" class="d-inline-block align-top">
+      <a class="navbar-brand" href="inicio.php">
+        <img src="imagenes/radar.png" alt="" width="50" height="35" class="d-inline-block align-top">
         Radar Custom&Logistics  
       </a>
       <a class="nav-link" href="computadora.php">Computadora</a>

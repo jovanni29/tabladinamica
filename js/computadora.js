@@ -12,12 +12,13 @@ function agregardatos(nombregab, marcagab, modelogab, tipogab, noseriegab, estad
             data: cadena,
             success: function (r) {
                 if (r== 1) {
-                    alertify.error("ocurrio un error");
-                    
-                } else {
                     $('#tabla').load('componentes/tabla_cpu.php');
                     $('#modalNuevo').modal("hide");
                     alertify.success("Agregado con exito");
+                    
+                    
+                } else {
+                    alertify.error("ocurrio un error");
                 }
             }
         });
@@ -83,15 +84,20 @@ function agregardatos(nombregab, marcagab, modelogab, tipogab, noseriegab, estad
             url: "php/computadora/actualizaDatos.php",
             data: cadena,
             success: function (r) {
+               
                 if (r== 1) {
-                    alertify.error("ocurrio un error");
+                    
+
+                    $('#tabla').load('componentes/tabla_cpu.php');
+                    $('#modalEdicion').modal("hide");
+                    alertify.success("Actualizado con exito");
+                    
                     
                    
                     
                 } else {
-                    $('#tabla').load('componentes/tabla_cpu.php');
-                    $('#modalEdicion').modal("hide");
-                    alertify.success("Actualizado con exito");
+                    console.log(r);
+                    alertify.error("ocurrio un error");
                 }
             }
         });
@@ -113,12 +119,13 @@ function agregardatos(nombregab, marcagab, modelogab, tipogab, noseriegab, estad
             data: cadena,
             success:function(r){
                 if (r== 1) {
-                    alertify.error("ocurrio un error");
-                    
-                } else {
                     $('#tabla').load('componentes/tabla_cpu.php');
                    
                     alertify.success("Eliminado con exito");
+                    
+                    
+                } else {
+                    alertify.error("ocurrio un error");
                 }
             }
     

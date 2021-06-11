@@ -7,14 +7,17 @@ function agregardatos(marca, modelo, no_serie, estado) {
         url: "php/agregarDatos.php",
         data: cadena,
         success: function (r) {
+            console.log(r);
             if (r== 1) {
-                alertify.error("ocurrio un error");
-                
-            } else {
                 $('#tabla').load('componentes/tabla_monitor.php');
                 $('#modalNuevo').modal("hide");
                // $('#modalNuevo')[0].reset();
                 alertify.success("Agregado con exito");
+
+                
+                
+            } else {
+                alertify.error("ocurrio un error");
             }
         }
     });
@@ -45,14 +48,15 @@ function actualizaDatos(){
         data: cadena,
         success: function (r) {
             if (r== 1) {
-                alertify.error("ocurrio un error");
-                
-               
-                
-            } else {
+
                 $('#tabla').load('componentes/tabla_monitor.php');
                 $('#modalEdicion').modal("hide");
                 alertify.success("Actualizado con exito");
+                
+                             
+                
+            } else {
+                alertify.error("ocurrio un error");
             }
         }
     });
@@ -73,12 +77,13 @@ function eliminarDatos(id){
         data: cadena,
         success:function(r){
             if (r== 1) {
-                alertify.error("ocurrio un error");
-                
-            } else {
                 $('#tabla').load('componentes/tabla_monitor.php');
                
                 alertify.success("Eliminado con exito");
+                
+                
+            } else {
+                alertify.error("ocurrio un error");
             }
         }
 
