@@ -28,6 +28,7 @@
             <a class="nav-link" href="telefono.php">Telefono</a>
             <a class="nav-link" href="router.php">Router</a>
             <a class="nav-link" href="impresora.php">Impresora</a>
+            <a href="php/salir.php" class="btn btn-info">Salir del sistema</a>
      
     </div>
     </nav>
