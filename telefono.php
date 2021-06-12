@@ -148,17 +148,57 @@
     <script type="text/javascript">
     $(document).ready(function(){
       $('#guardarnuevo').click(function(){
-        marca=$('#marca').val();
-        modelo=$('#modelo').val();
-        no_serie=$('#no_serie').val();
-        estado=$('#estado').val();
-        agregardatos(marca, modelo, no_serie, estado);
+        if($('#marca').val()==""){
+          alertify.alert("Debes agregar la marca :)");
+          return false;
+        } else if($('#modelo').val()==""){
+          alertify.alert("Debes agregar el modelo :)");
+          return false;
+        } else if($('#no_serie').val()==""){
+          alertify.alert("Debes agregar el numero de serie :)");
+          return false;
+        } 
+
+        cadena="marca=" + $('#marca').val() +
+					"&modelo=" + $('#modelo').val() +
+					"&no_serie=" + $('#no_serie').val() + 
+					"&estado=" + $('#estado').val();
+
+          $.ajax({
+        type: "POST",
+        url: "php/telefono/agregarDatos.php",
+        data: cadena,
+        success: function (r) {
+            
+            if (r== 1) {
+                $('#tabla').load('componentes/tabla_telefono.php');
+                $('#modalNuevo').modal("hide");
+               // $('#modalNuevo')[0].reset();
+                alertify.success("Agregado con exito");
+
+                
+                
+            } else {
+                alertify.error("Ocurrio un error");
+            }
+        }
+    });
+
+        
       });
 
       $('#actualizaDatos').click(function(){
         actualizaDatos();
       });
     });
+    </script>
+    <script type="text/javascript">
+    $('#modalNuevo').on('show.bs.modal', function (event) {
+    $("#modalNuevo input").val("");
+   
+    $("#modalNuevo select").val("funciona");
+    
+});
     </script>
        <?php
 } else {

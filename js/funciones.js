@@ -1,28 +1,4 @@
-function agregardatos(marca, modelo, no_serie, estado) {
 
-    cadena="marca="+marca+"&modelo="+modelo+"&no_serie="+no_serie+"&estado="+estado;
-
-    $.ajax({
-        type: "POST",
-        url: "php/agregarDatos.php",
-        data: cadena,
-        success: function (r) {
-            console.log(r);
-            if (r== 1) {
-                $('#tabla').load('componentes/tabla_monitor.php');
-                $('#modalNuevo').modal("hide");
-               // $('#modalNuevo')[0].reset();
-                alertify.success("Agregado con exito");
-
-                
-                
-            } else {
-                alertify.error("ocurrio un error");
-            }
-        }
-    });
-
-}
 
 function agregaform(datos){
     d=datos.split('||');
