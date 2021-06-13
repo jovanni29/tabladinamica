@@ -14,3 +14,4 @@
      
     </div>
     </nav>
+    <div class="d-flex justify-content-start"><?php echo "<p class='text-decoration-underline' class='text-primary'> Bienvenido: " . $_SESSION['user'];  ?></div>

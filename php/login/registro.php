@@ -10,7 +10,7 @@
 
       
 
-		if(buscaRepetido($usuario,$password,$conexion)==1){
+		if(buscaRepetido($usuario,$conexion)==1){
 			echo 2;
 		}else{
 			$sql="INSERT into usuarios (nombre,apellido,usuario,password)
@@ -18,9 +18,9 @@
 			echo $result=mysqli_query($conexion,$sql);
 		}
   
-        function buscaRepetido($user,$pass,$conexion){
+        function buscaRepetido($user,$conexion){
 			$sql="SELECT * from usuarios 
-				where usuario='$user' and password='$pass'";
+				where usuario='$user'";
 			$result=mysqli_query($conexion,$sql);
 
 			if(mysqli_num_rows($result) > 0){

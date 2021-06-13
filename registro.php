@@ -78,7 +78,7 @@
 								alertify.success("Agregado con exito");
 							}else{
 								
-                              
+								
                                 alertify.error("Fallo al agregar");
 							}
 						}
