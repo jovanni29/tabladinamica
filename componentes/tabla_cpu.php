@@ -14,12 +14,12 @@
         
             <thead class="table-dark">
               <tr>
-                <th scope="col">#</th>
+                <th scope="col">Id</th>
                 <th scope="col">Nombre de equipo</th>
                 <th scope="col">Marca</th>
                 <th scope="col">Modelo</th>
                 <th scope="col">Tipo</th>
-                <th scope="col">Editar</th>
+                <th scope="col">Ver/Editar</th>
                 <th scope="col">Eliminar</th>
               </tr>
               </thead>
@@ -40,7 +40,7 @@
             <td><?php echo $ver[3] ?></td>
             <td><?php echo $ver[4] ?></td>
             <td><button type='button' class='btn btn-warning' data-bs-toggle="modal" data-bs-target="#modalEdicion"
-             onclick="agregaform('<?php echo $datos ?>')">Editar</button></td>
+             onclick="agregaform('<?php echo $datos ?>')">Ver/Editar</button></td>
             <td><button type='button' class='btn btn-danger' onclick="preguntarSiNo('<?php echo $ver[0]?>')">Eliminar</button></td>
             </tr>
             </tbody>

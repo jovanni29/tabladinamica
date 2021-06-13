@@ -393,36 +393,173 @@
 </script>
 <script type="text/javascript">
     $(document).ready(function() {
-        $('#guardarnuevo').click(function() {
-            nombre_gab= $('#nombre_gab').val();
-            marca_gab=$('#marca_gab').val();
-            modelo_gab=$('#modelo_gab').val();
-            tipo_gab=$('#tipo_gab').val();
-            noserie_gab=$('#noserie_gab').val();
-            estado_gab=$('#estado_gab').val();
-            comentario_gab=$('#comentario_gab').val();
-            ariquetectura_so=$('#arquitectura_so').val();
-            version_so=$('#version_so').val();
-            id_so=$('#id_so').val();
-            marca_pro=$('#marca_pro').val();
-            modelo_pro=$('#modelo_pro').val();
-            frecuencia_pro=$('#frecuencia_pro').val();
-            nucleos_pro=$('#nucleos_pro').val();
-            hilos_pro=$('#nucleos_pro').val();
-            marca_ram=$('#marca_ram').val();
-            tipo_ram=$('#tipo_ram').val();
-            tamano_ram=$('#tamano_ram').val();
-            frecuencia_ram=$('#frecuencia_ram').val();
+        $('#guardarnuevo').click(function(){
+        if($('#nombre_gab').val()==""){
+          alertify.alert("Debes agregar el nombre del gabinete :)");
+          return false;
+        } else if($('#marca_gab').val()==""){
+          alertify.alert("Debes agregar la marca del gabinete :)");
+          return false;
+        } else if($('#modelo_gab').val()==""){
+          alertify.alert("Debes agregar el modelo del gabinete :)");
+          return false;
+        } 
+        else if($('#tipo_gab').val()==""){
+          alertify.alert("Debes agregar el tipo de gabinete :)");
+          return false;
+        }
+        else if($('#noserie_gab').val()==""){
+          alertify.alert("Debes agregar el numero de serie del gabinete :)");
+          return false;
+        }
+        else if($('#estado_gab').val()==""){
+          alertify.alert("Debes agregar el estado del gabinete :)");
+          return false;
+        }
+        
+        else if($('#arquitectura_so').val()==""){
+          alertify.alert("Debes agregar la arquitectura del SO :)");
+          return false;
+        }
+        else if($('#version_so').val()==""){
+          alertify.alert("Debes agregar la version del SO :)");
+          return false;
+        }   
+        else if($('#id_so').val()==""){
+          alertify.alert("Debes agregar el id del SO :)");
+          return false;
+        }  
+        else if($('#marca_pro').val()==""){
+          alertify.alert("Debes agregar la marca del procesador :)");
+          return false;
+        }  
+        else if($('#modelo_pro').val()==""){
+          alertify.alert("Debes agregar el modelo del procesador :)");
+          return false;
+        } 
+        else if($('#frecuencia_pro').val()==""){
+          alertify.alert("Debes agregar la frecuencia del procesador :)");
+          return false;
+        } 
+        else if($('#nucleos_pro').val()==""){
+          alertify.alert("Debes agregar los nucleos del procesador :)");
+          return false;
+        } 
+        else if($('#hilos_pro').val()==""){
+          alertify.alert("Debes agregar los hilos del procesador :)");
+          return false;
+        } 
+        
+        else if($('#marca_ram').val()==""){
+          alertify.alert("Debes agregar la marca de la memoria ram :)");
+          return false;
+        } 
+        else if($('#tipo_ram').val()==""){
+          alertify.alert("Debes agregar el tipo de ram :)");
+          return false;
+        } 
+        else if($('#tamano_ram').val()==""){
+          alertify.alert("Debes agregar el tamaño de la memoria ram :)");
+          return false;
+        } 
+        else if($('#frecuencia_ram').val()==""){
+          alertify.alert("Debes agregar la frecuencia de la ram :)");
+          return false;
+        } 
+        
 
-            agregardatos(nombre_gab, marca_gab, modelo_gab, tipo_gab, noserie_gab, estado_gab, comentario_gab, ariquetectura_so,
-            version_so, id_so, marca_pro, modelo_pro, frecuencia_pro, nucleos_pro, hilos_pro, marca_ram, tipo_ram, tamano_ram, frecuencia_ram);
-        });
+
+         
+
+        cadena="nombre_gab=" + $('#nombre_gab').val() +
+					"&marca_gab=" + $('#marca_gab').val() +
+					"&modelo_gab=" + $('#modelo_gab').val() + 
+					"&tipo_gab=" + $('#tipo_gab').val()+
+					"&noserie_gab=" + $('#noserie_gab').val() +
+					"&estado_gab=" + $('#estado_gab').val() + 
+					"&comentario_gab=" + $('#comentario_gab').val()+
+					"&arquitectura_so=" + $('#arquitectura_so').val() +
+					"&version_so=" + $('#version_so').val() + 
+					"&id_so=" + $('#id_so').val()+
+					"&marca_pro=" + $('#marca_pro').val() +
+					"&modelo_pro=" + $('#modelo_pro').val() + 
+					"&frecuencia_pro=" + $('#frecuencia_pro').val()+
+					"&nucleos_pro=" + $('#nucleos_pro').val() +
+					"&hilos_pro=" + $('#hilos_pro').val() + 
+					"&marca_ram=" + $('#marca_ram').val()+
+					"&tipo_ram=" + $('#tipo_ram').val() +
+					"&tamano_ram=" + $('#tamano_ram').val() + 
+					"&frecuencia_ram=" + $('#frecuencia_ram').val();
+
+          $.ajax({
+        type: "POST",
+        url: "php/computadora/agregarDatos.php",
+        data: cadena,
+        success: function (r) {
+            
+            if (r== 1) {
+                $('#tabla').load('componentes/tabla_cpu.php');
+                $('#modalNuevo').modal("hide");
+               // $('#modalNuevo')[0].reset();
+                alertify.success("Agregado con exito");
+
+                
+                
+            } else {
+                alertify.error("Ocurrio un error");
+            }
+        }
+    });
+
+        
+      });
+
+
+        // $('#guardarnuevo').click(function() {
+        //     nombre_gab= $('#nombre_gab').val();
+        //     marca_gab=$('#marca_gab').val();
+        //     modelo_gab=$('#modelo_gab').val();
+        //     tipo_gab=$('#tipo_gab').val();
+        //     noserie_gab=$('#noserie_gab').val();
+        //     estado_gab=$('#estado_gab').val();
+        //     comentario_gab=$('#comentario_gab').val();
+        //     ariquetectura_so=$('#arquitectura_so').val();
+        //     version_so=$('#version_so').val();
+        //     id_so=$('#id_so').val();
+        //     marca_pro=$('#marca_pro').val();
+        //     modelo_pro=$('#modelo_pro').val();
+        //     frecuencia_pro=$('#frecuencia_pro').val();
+        //     nucleos_pro=$('#nucleos_pro').val();
+        //     hilos_pro=$('#nucleos_pro').val();
+        //     marca_ram=$('#marca_ram').val();
+        //     tipo_ram=$('#tipo_ram').val();
+        //     tamano_ram=$('#tamano_ram').val();
+        //     frecuencia_ram=$('#frecuencia_ram').val();
+
+        //     agregardatos(nombre_gab, marca_gab, modelo_gab, tipo_gab, noserie_gab, estado_gab, comentario_gab, ariquetectura_so,
+        //     version_so, id_so, marca_pro, modelo_pro, frecuencia_pro, nucleos_pro, hilos_pro, marca_ram, tipo_ram, tamano_ram, frecuencia_ram);
+        // });
 
         $('#actualizaDatos').click(function() {
             actualizaDatos();
         });
     });
 </script>
+<script type="text/javascript">
+    $('#modalNuevo').on('show.bs.modal', function (event) {
+    $("#modalNuevo input").val("");
+    $("#modalNuevo textarea").val("");
+    $("#modalNuevo #tipo_gab").val("tower");
+    $("#modalNuevo #estado_gab").val("bodega");
+    $("#modalNuevo #arquitectura_so").val("32-bit");
+    $("#modalNuevo #version_so").val("7");
+    $("#modalNuevo #marca_pro").val("Intel");
+    $("#modalNuevo #tipo_ram").val("DDR3");
+   
+   
+    
+});
+    </script>
 <?php
 } else {
 	header("location:index.php");
