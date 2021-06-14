@@ -64,7 +64,7 @@
 							if(r==1){
 								window.location="inicio.php";
 							}else{
-								alertify.alert("Fallo al entrar :(");
+								alertify.alert("Fallo al entrar :( comprueba si tu usuario o contraseña son correctos");
 							}
 						}
 					});

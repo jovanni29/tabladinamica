@@ -19,31 +19,68 @@
 <body>
 <?php require_once "componentes/navegacion.php";
 	  ?>
-    
-    
- <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+   <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
   <div class="carousel-indicators">
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5" aria-label="Slide 6"></button>
   </div>
   <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="cpu.jpg" class="img-fluid" alt="...">
-      <img src="ups.jpg" class="img-fluid" alt="...">
-      <img src="monitor.jpg" class="img-fluid" alt="...">
-    
-    
+    <div class="carousel-item active" data-bs-interval="10000">
+    <a href="computadora.php" title="cpu">  <img src="imagenes/cpu.png" class="d-block mx-auto" alt="..."></a>
+     
+      <div class="carousel-caption d-none d-md-block">
+        
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+    <a href="monitor.php" title="monitor"> <img src="imagenes/monitor.png" class="d-block mx-auto" alt="imagen de monitor"></a>
+     
+      <div class="carousel-caption d-none d-md-block">
+        
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+    <a href="ups.php"><img src="imagenes/ups.png" class="d-block mx-auto" alt="imagen de ups"></a>
+      
+      <div class="carousel-caption d-none d-md-block">
+        
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+    <a href="telefono.php" title="telefono"><img src="imagenes/telefono.png" class="d-block mx-auto" alt="imagen de un telefono"></a>
+      
+      <div class="carousel-caption d-none d-md-block">
+        
+      </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+    <a href="router.php" title="router"><img src="imagenes/router.png" class="d-block mx-auto" alt="imagen de un router"></a>
+       
+      <div class="carousel-caption d-none d-md-block">
+        
+      </div>
+    </div>
+    <div class="carousel-item">
+    <a href="impresora.php" title="impresora"><img src="imagenes/impresora.png" class="d-block mx-auto" alt="imagen de una impresora"></a>
+      <div class="carousel-caption d-none d-md-block">
+        
+      </div>
+    </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
-</div>   
+</div>
+ 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>   
 </body>
 </html>
