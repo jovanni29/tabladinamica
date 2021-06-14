@@ -75,11 +75,11 @@
 							}
 							else if(r==1){
                                 $('#frmRegistro')[0].reset();
-								alertify.success("Agregado con exito");
+								alertify.success("Usuario registrado con exito");
 							}else{
 								
 								
-                                alertify.error("Fallo al agregar");
+                                alertify.error("Error al registrar usuario");
 							}
 						}
 					});
